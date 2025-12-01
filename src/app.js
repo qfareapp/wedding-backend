@@ -10,6 +10,7 @@ import photoRoutes from "./routes/photo.routes.js";
 import adminRoutes from "./routes/admin.routes.js";
 import uploadRoutes from "./routes/upload.routes.js";
 import rsvpRoutes from "./routes/rsvp.routes.js";
+import photosRoutes from "./routes/photos.routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,6 +28,7 @@ app.use("/api/photos", photoRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/rsvp", rsvpRoutes);
+app.use("/photos", photosRoutes);
 
 app.get("/", (req, res) => res.send("Wedding App Backend Running"));
 
